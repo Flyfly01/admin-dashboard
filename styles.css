@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dash-icon,
+.profile-pic {
+  height: 30px;
+  width: 30px;
+}
+
+.header-icon,
+.sidebar-icon,
+.pro-pic {
+  height: 20px;
+  width: 20px;
+}
+
+.card-icon {
+  height: 15px;
+  width: 15px;
+}
