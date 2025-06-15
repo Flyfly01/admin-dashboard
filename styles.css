@@ -150,9 +150,24 @@ ul {
 }
 
 .announcements {
-  background-color: pink;
+  background-color: pink; 
 }
 
 .box1 {
   background-color: antiquewhite;
 }
+
+.trending {
+  background-color: lightgoldenrodyellow;
+}
+
+.box2 {
+  background-color: lightskyblue;
+}
+
+.animals {
+  display: flex;
+  gap: 20px;
+}
+
+
