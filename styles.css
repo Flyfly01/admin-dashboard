@@ -1,25 +1,62 @@
+@font-face {
+  font-family: 'robotolight';
+  src: url('fonts/final-roboto/roboto-light-webfont.woff2') format('woff2'),
+       url('fonts/final-roboto/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url('fonts/final-roboto/roboto-medium-webfont.woff2') format('woff2'),
+       url('fonts/final-roboto/roboto-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('fonts/final-roboto/roboto-bold-webfont.woff2') format('woff2'),
+       url('fonts/final-roboto/roboto-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 .dash-icon {
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
 }
 
 .profile-pic {
   height: 80px;
   width: 80px;
-  background-color: #C8A2C8;
+  background-color: palegoldenrod;
   border-radius: 50%;
 }
 
 .header-icon,
-.sidebar-icon,
+.sidebar-icon {
+  height: 25px;
+  width: 25px;
+}
+
 .pro-pic {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width:40px;
+  border-radius: 50%;
 }
 
 .card-icon {
@@ -28,45 +65,73 @@
 }
 
 .container {
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
-}
-
-.main {
-  background-color: green;
+  grid-template-rows: 1fr 3fr;
+  row-gap: 6px;
 }
 
 .header {
-  background-color: yellow;
+  background-color: white;
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding-left: 50px;
   padding-right: 50px;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .search {
-  background-color: antiquewhite;
+  /*background-color: antiquewhite;*/
   display: flex;
   align-items: center;
   gap: 30px;
+  width: 900px;
+}
+
+/*form itself*/
+.search-icon {
+  display: flex;
+  border: none;
+  background-color: #DFE6DA;;
+  border-radius: 25px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+/*this is the search bar INSIDE the form element*/
+.search-icon input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  flex: 1
 }
 
 .rhs-top {
-  background-color: brown;
+  /*background-color: brown;*/
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.momo {
+  background-color: palegoldenrod;
 }
 
 .greeting {
-  background-color: aqua;
+  /*background-color: aqua;*/
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto auto;
   align-items: center;
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
 }
 
 .greeting .profile-pic {
@@ -75,10 +140,15 @@
 
 .greeting p {
   grid-column: 2;
+  font-size: 15px;
+}
+
+.greeting h3 {
+  font-size: 24px;
 }
 
 .menu {
-  background-color: lightcoral;
+  /*background-color: lightcoral;*/
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -89,22 +159,45 @@
   gap: 30px;
 }
 
+button {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: #aebd81;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+}
+
 
 .sidebar {
-  background-color: blue;
+  background-color: #aebd81;
   grid-row: 1 / 3;
-  padding-left: 20px;
   display: grid;
   grid-template-rows: 100px 300px 175px;
   row-gap: 25px;
 }
 
+.dashboard p {
+  font-family: 'robotobold', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+span {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
 .dashboard {
-  background-color: grey;
+  /*background-color: grey;*/
   display: flex;
   margin-top: 20px;
   gap: 15px;
   align-items: center;
+  font-size: 22px;
+  padding-left: 30px;
 }
 
 ul {
@@ -112,16 +205,18 @@ ul {
 }
 
 .menu-top {
- background-color: white;
+ /*background-color: white;*/
  display: flex;
  align-items: center;
+ padding-left: 43px;
  
 }
 
 .menu-bottom {
-  background-color: peru;
+  /*background-color: peru;*/
   display: flex;
   align-items: center;
+  padding-left: 43px;
 }
 
 .menu-top li,
@@ -142,6 +237,13 @@ ul {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: #DFE6DA;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .schedules {
@@ -149,25 +251,138 @@ ul {
   grid-row: 1 / 3;
 }
 
+.schedules h4 {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
 .announcements {
-  background-color: pink; 
+  grid-column: 2;
+  grid-row: 1/2;
+}
+
+.announcements h4 {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
 
 .box1 {
-  background-color: antiquewhite;
+  background-color: white;
+  border-radius: 25px;
+  /*height: 300px;*/
+  padding: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.annment h6 {
+  font-family: 'robotobold', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.annment p {
+  font-family: 'robotolight', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.annment {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #DFE6DA;
+}
+
+.annment:last-child {
+  border-bottom: none;
 }
 
 .trending {
-  background-color: lightgoldenrodyellow;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.trending h4 {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
 
 .box2 {
-  background-color: lightskyblue;
+  background-color: white;
+  height: 300px;
+  display: grid;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .animals {
   display: flex;
   gap: 20px;
+}
+
+.animals p:first-child {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.animals p:last-child {
+  font-family: 'robotolight', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.cooper {
+  background-color: lightblue;
+  border-radius: 50%;
+}
+
+.daisy {
+  background-color: gold;
+  border-radius: 50%;
+}
+
+.chester {
+  background-color: #C8A2C8;
+  border-radius: 50%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-left: 10px solid #F5F2B9;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;       /* vertical stack */
+  height: 250px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card h5,
+.card p {
+  text-align: left;
+}
+
+.card h5 {
+  font-family: 'robotobold', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.card p {
+  font-family: 'robotolight', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.icons {
+  margin-top: auto; /*pushes this all the way to bottom of the card*/
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 
